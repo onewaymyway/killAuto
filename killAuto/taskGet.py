@@ -8,6 +8,8 @@ import time
 import urllib.parse
 import urllib.request
 import http.cookiejar
+from datetime import datetime
+
 
 from fileNames import userFile, taskedUser, checkedProxyFile
 from wwTools.fileTools import openFileToDic, dicRemove, getDicArr, openFileToArr,\
@@ -127,7 +129,7 @@ class IPGetter:
                     time.sleep(1)
                 except Exception as e:
                     sprint(e)
-                    sprint("fail:"+self.user)
+                    sprint("fail:",self.user)
                     time.sleep(1)
 
 
@@ -216,7 +218,7 @@ def beginWork():
 
     initUsers()
     initProxy()
-    if len(proxys)<700:
+    if len(proxys)<5000 and datetime.now().hour<8:
         print("proxy not enough wait next")
         return
     tCount=100;
