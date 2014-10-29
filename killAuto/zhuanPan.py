@@ -12,7 +12,7 @@ import json
 from datetime import datetime
 
 
-from fileNames import userFile, taskedUser, checkedProxyFile
+from fileNames import userFile, zhuanPanedUser, checkedProxyFile
 from wwTools.fileTools import openFileToDic, dicRemove, getDicArr, openFileToArr,\
     appendData, hasFile
     
