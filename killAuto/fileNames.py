@@ -13,6 +13,9 @@ def regedProxy():
 def taskedUser():
     return "taskedUser/"+getDateName()+".txt"
 
+def zhuanPanedUser():
+    return "zhuanPanedUser/"+getDateName()+".txt"
+
 def userFile():
     return "regUser/rgd.txt"
 
