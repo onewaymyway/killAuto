@@ -114,7 +114,7 @@ class IPGetter:
         req = urllib.request.Request(iUrl,data)
         rst=self.opener.open(req).read().decode('utf-8')
         rst=json.loads(rst)
-        print(rst)
+        #print(rst)
         
     def getZhuanPan(self):
         self.recoverZhuanPan()
@@ -126,7 +126,7 @@ class IPGetter:
         req = urllib.request.Request(iUrl,data)
         rst=self.opener.open(req).read().decode('utf-8')
         rst=json.loads(rst)
-        print(rst)
+        #print(rst)
         #return
         if rst["nowFree"]>0:
             self.ZhuanPan()
@@ -146,7 +146,7 @@ class IPGetter:
         req = urllib.request.Request(iUrl,data)
         rst=self.opener.open(req).read().decode('utf-8')
         rst=json.loads(rst)
-        print(rst)
+        sprint(rst)
         #{'addGiftNum': 0, 'start': 0, 'objType': 0, 'result': 69, 'newVip': 0, 'turnID': 16139771, 'msg': 'OK', 'objID': 100167}
         #return
         if rst["turnID"]>0:
@@ -166,7 +166,7 @@ class IPGetter:
         req = urllib.request.Request(iUrl,data)
         rst=self.opener.open(req).read().decode('utf-8')
         rst=json.loads(rst)
-        print(rst)
+        #print(rst)
         
     def testWork(self):
         self.user="AYaj9+oHWbajAWD/kczujdtetcyOdOq+";
@@ -286,7 +286,7 @@ def beginWork():
 
     initUsers()
     initProxy()
-    if len(proxys)<5000 and datetime.now().hour<8:
+    if len(proxys)<5000 and datetime.now().hour<9:
         print("proxy not enough wait next")
         return
     tCount=100;
