@@ -34,6 +34,7 @@ def writeCount(dic):
 def getPics(fileName):
     arr,dic=getArr(fileName)
     writeCount(dic)
+    return
     for id in arr:
         try:
             getPic(id)
@@ -42,6 +43,6 @@ def getPics(fileName):
             print("fail:",id)
 
 #getPics("zhuanpanRst.txt")
-getPics("zhuanpan.txt")
+getPics("../outPuts/zhuanpan.txt")
 
     
