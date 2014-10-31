@@ -196,9 +196,12 @@ class IPGetter:
                     self.changeUser()
                     time.sleep(1)
                 except Exception as e:
-                    sprint(e)
-                    sprint("fail:",self.user)
-                    time.sleep(1)
+                    try:
+                        sprint(e)
+                        sprint("fail:",self.user)
+                        time.sleep(1)
+                    except:
+                        pass
 
 
 
@@ -269,7 +272,11 @@ def runAwork():
 
 def sprint(*args):
     mylock.acquire()
-    print(*args)
+    try:
+       print(*args)
+       
+    except:
+       pass
 
     mylock.release()
 def initProxy():
